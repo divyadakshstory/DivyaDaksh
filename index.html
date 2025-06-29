@@ -69,19 +69,6 @@
       font-size: 0.9em;
       color: #999;
     }
-    @media (max-width: 600px) {
-      h1 {
-        font-size: 2em;
-        margin-top: 60px;
-      }
-      #typewriter {
-        font-size: 1.1em;
-      }
-      .gallery {
-        flex-direction: column;
-        gap: 15px;
-      }
-    }
     @keyframes fadeIn {
       from {opacity: 0;}
       to {opacity: 1;}
@@ -96,12 +83,14 @@
   <h1>Happy Birthday My Dear Divu 🎂❤️</h1>
   <div id="typewriter">You're my smile, my peace, my everything. 💫</div>
 
+  <!-- GALLERY: Add images here -->
   <div class="gallery">
     <img src="images/photo1.jpg" alt="Our Moment 1"/>
     <img src="images/photo2.jpg" alt="Our Moment 2"/>
     <img src="images/photo3.jpg" alt="Our Moment 3"/>
   </div>
 
+  <!-- AUDIO: Rename your file if needed -->
   <audio controls autoplay loop>
     <source src="hamdard.mp3" type="audio/mpeg">
     Your browser does not support the audio element.
@@ -111,10 +100,9 @@
     Made with ❤️ by Daksh
   </footer>
 
-  <!-- Confetti JS -->
+  <!-- Confetti -->
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
   <script>
-    // Fire confetti on load
     window.onload = () => {
       confetti({
         particleCount: 150,
