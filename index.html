@@ -1,59 +1,95 @@
-
 <!DOCTYPE html>
-<html lang="="en">
+<html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Happy Birthday Divu 💖</title>
-    <style>
-        body {
-            margin: 0;
-            background: linear-gradient(to top right, #ffd6e7, #fff8f8);
-            font-family: 'Segoe UI', sans-serif;
-            color: #4e2a3e;
-            text-align: center;
-            overflow-x: hidden;
-        }
-        h1 {
-            margin-top: 100px;
-            font-size: 3em;
-        }
-        p {
-            font-size: 1.2em;
-        }
-        .gallery {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            margin-top: 50px;
-            gap: 15px;
-        }
-        .gallery img {
-            max-width: 300px;
-            border-radius: 15px;
-            box-shadow: 0 0 10px #999;
-        }
-        audio {
-            position: fixed;
-            bottom: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Happy Birthday Divu 💖</title>
+  <style>
+    body {
+      margin: 0;
+      background: linear-gradient(to top right, #ffd6e7, #fff8f8);
+      font-family: 'Segoe UI', sans-serif;
+      color: #4e2a3e;
+      text-align: center;
+      overflow-x: hidden;
+      line-height: 1.6;
+      padding-bottom: 80px;
+    }
+    h1 {
+      margin-top: 100px;
+      font-size: 3em;
+      animation: fadeIn 2s ease-in-out;
+    }
+    p {
+      font-size: 1.3em;
+      margin: 20px;
+    }
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: 50px 20px 0;
+      gap: 20px;
+    }
+    .gallery img {
+      width: 100%;
+      max-width: 300px;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+    audio {
+      position: fixed;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 90%;
+      max-width: 400px;
+    }
+    footer {
+      margin-top: 40px;
+      font-size: 0.9em;
+      color: #999;
+    }
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2em;
+        margin-top: 60px;
+      }
+      p {
+        font-size: 1.1em;
+      }
+      .gallery {
+        flex-direction: column;
+        gap: 15px;
+      }
+    }
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+  </style>
 </head>
 <body>
-    <h1>Happy Birthday My Dear Divu 🎂❤️</h1>
-    <p>Thank you so much for everything. You're my smile, my peace, my everything. 💫</p>
+  <h1>Happy Birthday My Dear Divu 🎂❤️</h1>
+  <p>Thank you so much for everything. You're my smile, my peace, my everything. 💫</p>
 
-    <div class="gallery">
-        <img src="images/photo1.jpg" alt="Our Moment 1"/>
-        <img src="images/photo2.jpg" alt="Our Moment 2"/>
-        <img src="images/photo3.jpg" alt="Our Moment 3"/>
-    </div>
+  <div class="gallery">
+    <img src="images/photo1.jpg" alt="Our Moment 1"/>
+    <img src="images/photo2.jpg" alt="Our Moment 2"/>
+    <img src="images/photo3.jpg" alt="Our Moment 3"/>
+  </div>
 
-    <audio controls autoplay loop>
-        <source src="hamdard.mp3" type="audio/mpeg">
-        Your browser does not support the audio element.
-    </audio>
+  <audio controls autoplay loop>
+    <source src="hamdard.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <footer>
+    Made with ❤️ by Daksh
+  </footer>
 </body>
 </html>
