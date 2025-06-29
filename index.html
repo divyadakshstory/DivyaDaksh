@@ -20,9 +20,21 @@
       font-size: 3em;
       animation: fadeIn 2s ease-in-out;
     }
-    p {
+    #typewriter {
       font-size: 1.3em;
       margin: 20px;
+      white-space: nowrap;
+      overflow: hidden;
+      border-right: 3px solid #4e2a3e;
+      width: 0;
+      animation: typing 4s steps(40, end) forwards, blink 0.75s step-end infinite;
+    }
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
+    }
+    @keyframes blink {
+      50% { border-color: transparent }
     }
     .gallery {
       display: flex;
@@ -30,6 +42,9 @@
       justify-content: center;
       margin: 50px 20px 0;
       gap: 20px;
+      opacity: 0;
+      animation: fadeIn 2s ease forwards;
+      animation-delay: 4.2s;
     }
     .gallery img {
       width: 100%;
@@ -59,7 +74,7 @@
         font-size: 2em;
         margin-top: 60px;
       }
-      p {
+      #typewriter {
         font-size: 1.1em;
       }
       .gallery {
@@ -75,7 +90,7 @@
 </head>
 <body>
   <h1>Happy Birthday My Dear Divu 🎂❤️</h1>
-  <p>Thank you so much for everything. You're my smile, my peace, my everything. 💫</p>
+  <div id="typewriter">You're my smile, my peace, my everything. 💫</div>
 
   <div class="gallery">
     <img src="images/photo1.jpg" alt="Our Moment 1"/>
@@ -91,5 +106,18 @@
   <footer>
     Made with ❤️ by Daksh
   </footer>
+
+  <!-- Confetti JS -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  <script>
+    // Fire confetti on load
+    window.onload = () => {
+      confetti({
+        particleCount: 150,
+        spread: 100,
+        origin: { y: 0.6 }
+      });
+    };
+  </script>
 </body>
 </html>
